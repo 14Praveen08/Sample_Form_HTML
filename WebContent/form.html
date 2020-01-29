@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sample Form</title>
+</head>
+<body>
+
+<form>
+<table border="1" align="center">
+	<tr>
+	<td>
+	<label for = "Name">Employee Name:</label>
+	<input type="text" name="Name" id="Name" placeholder="Enter your Name" required>
+	</td>
+	<td>
+	<label for = "DOB">D.O.B</label>
+	<input type="date" name="DOB" id="DOB" placeholder="Select your DOB" required><br>
+	</tr>
+	<tr>
+	<td>
+	<label for = "Email">Email ID:</label>
+	<input type="email" name="Email" id="Email" placeholder="Enter your Email ID"required>
+	</td>
+	<td>
+	<label for = "Password">Unique ID</label>
+	<input type="password" name="Password" id="Password" placeholder="Enter your Unique ID"required><br>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>Specify the number of Kids you have</p>
+	<input type="radio" name="Children" value="0"><label for = "0">0</label><br>
+	<input type="radio" name="Children" value="1"><label for = "1">1</label><br>
+	<input type="radio" name="Children" value="2"><label for = "2">2</label><br>
+	<input type="radio" name="Children" value="more than 2"><label for = "more than 2">More than 2</label><br>
+	</td>
+	<td>
+	<p>Mention your Educational Qualifications</p>
+	<input type="checkbox" name="Qualification" value="SSLC"><label for = "SSLC">SSLC</label>
+	<input type="checkbox" name="Qualification" value="Polytechnic"><label for = "Polytechnic">Polytechnic</label><br>
+	<input type="checkbox" name="Qualification" value="HSC"><label for = "HSC">HSC</label>
+	<input type="checkbox" name="Qualification" value="Bachelors"><label for = "Bachelors">Bachelors</label><br>
+	<input type="checkbox" name="Qualification" value="Masters"><label for = "Masters">Masters</label><br>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>Select your Work Location</p>
+	<input list="WorkLocation" name="WorkLocation" placeholder="Your Work Location">
+  	<datalist id="WorkLocation">
+    <option value="Chennai">
+    <option value="Kerala">
+    <option value="Bangalore">
+    <option value="Mumbai">
+    <option value="Delhi">
+  	</datalist><br><br>
+  	</td>
+  	<td>
+  	<label for = "Color">Select a color for our new company Building:</label><br>
+	<input type="color" name="Color" id="Color"><br><br>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<label for = "Picture">Upload your photo for your New ID Card</label><br>
+	<input type="file" name="Picture" id="Picture"><br>
+	</td>
+	<td>
+	<label >Short Description About You</label><br>
+	<textarea name="message" rows="10" cols="30"></textarea><br>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<label for = "Resume">Upload your Resume</label><br>
+	<input type="file" name="Resume" id="Resume"><br>
+	</td>
+	<td>
+	<label for = "rangeInput">Specify your Appx. Salary(3L to 10L)</label><br><br>
+	<input type="range" name="rangeInput" min="300000" max="1000000" onchange="updateTextInput(this.value);"><br>
+	<input type="text" id="textInput" value="">
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<label for = "phone">Enter your Phone Number</label>
+	<input type="tel" name="phone" id="phone" pattern="[0-9]{5}-[0-9]{5}"required><br><span>Format: xxxxx-xxxxx</span><br><br>
+	</td>
+	<td>
+	<label for = "Website">Enter your Website Address(If Any)</label>
+	<input type="url" name="Website" id="Website" placeholder="Enter your URL"><br><br>
+	</td>
+	</tr>
+	<tr>
+	<tr>
+	<td>
+	<p align="center"><input type="reset" value="Reset"> <input type="submit" value="Submit"></p>
+	</td>
+	<td>
+	<p align="center"> Welcome to our Company</p> 
+	</td>
+	</tr>
+		
+</form>
+<script type="text/javascript" charset="utf-8">
+function updateTextInput(val) {
+    document.getElementById('textInput').value=val; 
+  }
+</script>
+</body>
+</html>
